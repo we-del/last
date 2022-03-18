@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防抖</title>
+</head>
+<body>
+<input type="text"/>
+<script>
+    let inputNode = document.querySelector("input");
+    let timer = null;
+    inputNode.addEventListener('keyup',()=>{
+        clearTimeout(timer);
+        timer =  setTimeout(()=>{
+            console.log(inputNode.value);
+        },2000);
+    });
+
+</script>
+</body>
+</html>

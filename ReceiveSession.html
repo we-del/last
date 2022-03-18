@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>接收消息</button>
+<script>
+    let btn = document.querySelector("button");
+    btn.addEventListener("click", ()=>{
+        let msg = JSON.parse(localStorage.getItem("msg"));
+        if(typeof msg == "string"&&msg =="吃了吗"){
+            console.log("吃了");
+        }else{
+            console.log("session接收失败");
+        }
+    })
+</script>
+</body>
+</html>
